@@ -1,0 +1,558 @@
+@charset "UTF-8";
+
+/* .libre-baskerville-<uniquifier> {
+  font-family: "Libre Baskerville", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* .noto-sans-jp-<uniquifier> {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #333;
+  font-weight: 400px;
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+p {
+  display: inline-block;
+}
+
+/* 共通 */
+.wrapper {
+  max-width: 1500px;
+  width: 93%;
+  margin: 0 auto;
+}
+
+.inner {
+  max-width: 1040px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+main {
+  padding-bottom: 110px;
+}
+
+/* ヘッダー */
+header {
+  background-color: #a9cbd8;
+  font-family: 'Libre Baskerville', serif;
+  margin-bottom: 75px;
+}
+
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+
+header ul {
+  display: flex;
+  gap: 18px;
+}
+
+header a {
+  position: relative;
+  font-size: 1rem;
+  color: #fff;
+  display: block;
+}
+
+header li a::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #5185a7;
+  bottom: -1px;
+  transform: scaleX(0);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+
+header li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* 作品一覧 */
+#category-area {
+  display: flex;
+}
+
+.category-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.category-btn button {
+  position: relative;
+  width: fit-content;
+  font-size: 1.25rem;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.category-btn button:hover {
+  color: #5185a7;
+  cursor: pointer;
+}
+
+.category-btn button::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #5185a7;
+  bottom: -1px;
+  transform: scaleX(0);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+
+.category-btn button:hover:after {
+  transform: scaleX(1);
+}
+
+.click-button {
+  color: #5185a7;
+}
+
+#work-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 1.5rem;
+}
+
+#work-list li {
+  transition: transform 0.5s ease;
+}
+
+#work-list li:hover {
+  transform: translateY(-5px);
+}
+
+#work-list img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.label {
+  padding: 3px 13px;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  color: #fff;
+  margin-top: 9px;
+}
+
+.label-orange {
+  background-color: #d5a879;
+}
+
+.label-blue {
+  background-color: #61a1b8;
+}
+
+.tag {
+  color: #868686;
+  font-size: 0.9rem;
+}
+
+.work-list h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* 自己紹介ページ */
+/* about */
+#about-main h2 {
+  /* position: relative; */
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700px;
+  font-size: 2.5rem;
+  color: #333;
+  width: fit-content;
+  border-bottom: 1px solid #81b8cd;
+}
+
+.about-content {
+  margin: 85px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+}
+
+.about-content img {
+  width: 158px;
+  border-radius: 50%;
+}
+
+.about-name {
+  display: flex;
+  gap: 10px;
+}
+
+.about-name h3 {
+  font-size: 1.5rem;
+}
+
+.about-name p {
+  font-size: 1.1rem;
+}
+
+.about-text {
+  margin-top: 15px;
+}
+
+/* スキル */
+#skill {
+  background-color: #f0f6f6;
+  padding: 65px 0;
+}
+
+.skill-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 85px;
+}
+
+.skill-detail {
+  background-color: #fff;
+  border: 1px solid #65d4ff;
+  border-radius: 15px;
+  width: 48%;
+  padding: 27px 23px;
+}
+
+.skill-detail h3 {
+  font-size: 1.5rem;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 300px;
+  text-align: center;
+}
+
+.skill-icon {
+  margin: auto;
+  margin-top: 10px;
+}
+
+.skill-icon img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  margin-top: 16px;
+}
+
+.skill-name {
+  color: #81b8cd;
+  font-size: 0.9rem;
+  margin-top: 18px;
+}
+
+.skill-text {
+  color: #333;
+  font-size: 1rem;
+  margin-top: 11px;
+}
+
+/* 強み */
+#strengths {
+  margin-top: 65px;
+  margin-bottom: 110px;
+}
+
+.strengths-content {
+  margin-top: 85px;
+}
+
+.strengths-content li {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #cbcbcb;
+  padding: 30px 0;
+}
+
+.strengths-content li:last-child {
+  border-bottom: 1px solid #cbcbcb;
+}
+
+.strengths-content h3 {
+  font-size: 1.5rem;
+  width: 99px;
+}
+
+.strengths-content p {
+  font-size: 1.1rem;
+  width: 620px;
+}
+
+/* 作品詳細 */
+.work-title #tag {
+  color: #81b8cd;
+  font-size: 1rem;
+}
+
+.work-title #label {
+  padding: 3px 13px;
+  font-size: 0.7rem;
+  border-radius: 30px;
+  color: #81b8cd;
+  margin-left: 1%;
+  border: 1px solid #81b8cd;
+}
+
+.work-title h2 {
+  font-size: 2.5rem;
+  width: fit-content;
+}
+
+.work-title a {
+  pointer-events: auto;
+  border-bottom: 1px solid #5185a7;
+  width: fit-content;
+  color: #5185a7;
+}
+
+.work-title #url {
+  display: block;
+  height: 24px;
+}
+
+.work-display-area {
+  background-color: #f0f6f6;
+  padding: 37px 0px;
+  margin-top: 40px;
+}
+
+.work-details {
+  margin-top: 40px;
+}
+
+.work-details dl {
+  display: grid;
+  gap: 33px;
+}
+
+.work-details dl div {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+#work-img {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.work-details dt {
+  color: #81b8cd;
+}
+
+.work-details dd {
+  width: 80%;
+}
+
+.work-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 12px 20px;
+  border-radius: 50%;
+}
+
+/* 左矢印 */
+.arrow-left {
+  position: relative;
+  width: 15px;
+  height: 62px;
+}
+
+.arrow-left::before,
+.arrow-left::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 0;
+  width: 15px;
+  height: 4px;
+  border-radius: 9999px;
+  background-color: #61a1b8;
+  transform-origin: 2px 50%;
+}
+
+.arrow-left::before {
+  transform: rotate(45deg);
+}
+
+.arrow-left::after {
+  transform: rotate(-45deg);
+}
+
+/* 右矢印 */
+.arrow-right {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 62px;
+}
+
+.arrow-right::before,
+.arrow-right::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 2px);
+  right: 0;
+  width: 15px;
+  height: 4px;
+  border-radius: 9999px;
+  background-color: #61a1b8;
+  transform-origin: calc(100% - 2px) 50%;
+}
+
+.arrow-right::before {
+  transform: rotate(45deg);
+}
+
+.arrow-right::after {
+  transform: rotate(-45deg);
+}
+
+/* ここまで */
+
+.work-nav {
+  margin-top: 100px;
+}
+
+.work-nav button {
+  padding: 0;
+  color: #333;
+}
+
+.work-nav button:hover {
+  color: #5185a7;
+}
+
+/* フッター */
+footer {
+  background-image: url(../img/footer_bg.png);
+  background-size: 100%;
+  margin-top: auto;
+  padding: 41px 0;
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.footer-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-area a {
+  color: #fff;
+  font-size: 1rem;
+  width: fit-content;
+}
+
+.footer-area a:hover {
+  color: #5185a7;
+}
+
+.copyright {
+  font-size: 1rem;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  /* 作品一覧 */
+  #work-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 2rem 1rem; */
+  }
+
+  #category-area {
+    display: block;
+  }
+
+  .category-btn {
+    margin-bottom: 20px;
+  }
+
+  .category-btn button {
+    width: 100%;
+  }
+
+  /* 作品詳細 */
+  .work-title h2 {
+    font-size: 1.5rem;
+  }
+}

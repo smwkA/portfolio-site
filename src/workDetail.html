@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sm-portfolio 作品詳細</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400..700&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body id="work">
+    <header>
+      <div class="wrapper">
+        <h1>
+          <a href="index.html">
+            Suga Marin<br />
+            Portfolio
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="./about.html">About</a></li>
+            <!-- <li><a href="#contect-area">Contact</a></li> -->
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="work-detail">
+      <div class="inner">
+        <div class="work-title">
+          <p id="tag"></p>
+          <p id="label"></p>
+          <h2 id="title"></h2>
+          <a href="" id="url"></a>
+        </div>
+      </div>
+      <div class="work-display-area">
+        <div class="inner">
+          <img id="work-img" src="#" alt="仮の画像" />
+        </div>
+      </div>
+      <div class="inner">
+        <div class="work-details">
+          <dl>
+            <div>
+              <dt>ターゲット</dt>
+              <dd id="target"></dd>
+            </div>
+
+            <div>
+              <dt>目的</dt>
+              <dd id="purpose"></dd>
+            </div>
+
+            <div>
+              <dt>ポイント</dt>
+              <dd id="point"></dd>
+            </div>
+
+            <div>
+              <dt>制限時間</dt>
+              <dd id="time"></dd>
+            </div>
+
+            <div>
+              <dt>サイズ</dt>
+              <dd id="size"></dd>
+            </div>
+
+            <div>
+              <dt>使用ツール</dt>
+              <dd id="tool"></dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="work-nav">
+          <button type="button" id="left-btn" class="arrow-btn">
+            <span class="arrow-left"></span>
+            <span>前の作品へ</span>
+          </button>
+          <button type="button" id="right-btn" class="arrow-btn">
+            <span>次の作品へ</span>
+            <span class="arrow-right"></span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-area wrapper">
+        <div class="footer-nav">
+          <a href="index.html">Work</a>
+          <a href="about.html">About</a>
+          <a class="top-link" href="">Work Detail</a>
+        </div>
+        <div class="copyright">
+          <small>&copy;2026 suga marin</small>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/getWorkDetail.js"></script>
+    <script type="module" src="./js/getNextWorkDetail.js"></script>
+  </body>
+</html>

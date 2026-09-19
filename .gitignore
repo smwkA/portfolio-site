@@ -1,0 +1,13 @@
+# dependencies
+/node_modules
+
+# product
+/dist
+
+# test
+/coverage
+
+# misc
+.DS_Store
+Thumbs.db
+npm-debug.log*

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sm-portfolio 作品一覧</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400..700&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body id="work">
+    <header>
+      <div class="wrapper">
+        <h1>
+          <a href="index.html">
+            Suga Marin<br />
+            Portfolio
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="./about.html">About</a></li>
+            <!-- <li><a href="#contect-area">Contact</a></li> -->
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper">
+        <section id="category-area">
+          <div class="category-btn">
+            <button data-category="all">All</button>
+            <button data-category="fl">Flier</button>
+            <button data-category="ps">Poster</button>
+            <button data-category="web">Web</button>
+            <button data-category="bn">Banner</button>
+          </div>
+          <div class="inner">
+            <div class="work-list">
+              <ul id="work-list"></ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-area wrapper">
+        <div class="footer-nav">
+          <a href="index.html">Work</a>
+          <a href="about.html">About</a>
+        </div>
+        <div class="copyright">
+          <small>&copy;2026 suga marin</small>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/getWorkList.js"></script>
+    <script src="./js/categoryButton.js"></script>
+  </body>
+</html>
