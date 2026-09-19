@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   color: #333;
@@ -79,7 +79,7 @@ main {
 /* ヘッダー */
 header {
   background-color: #a9cbd8;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   margin-bottom: 75px;
 }
 
@@ -105,7 +105,7 @@ header a {
 header li a::after {
   position: absolute;
   left: 0;
-  content: '';
+  content: "";
   width: 100%;
   height: 2px;
   background-color: #5185a7;
@@ -135,7 +135,7 @@ header li a:hover::after {
   position: relative;
   width: fit-content;
   font-size: 1.25rem;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
 }
 
 .category-btn button:hover {
@@ -146,7 +146,7 @@ header li a:hover::after {
 .category-btn button::after {
   position: absolute;
   left: 0;
-  content: '';
+  content: "";
   width: 100%;
   height: 2px;
   background-color: #5185a7;
@@ -166,7 +166,7 @@ header li a:hover::after {
 
 #work-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3rem 1.5rem;
 }
 
@@ -214,7 +214,7 @@ header li a:hover::after {
 /* about */
 #about-main h2 {
   /* position: relative; */
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   font-weight: 700px;
   font-size: 2.5rem;
   color: #333;
@@ -259,9 +259,9 @@ header li a:hover::after {
 }
 
 .skill-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5%;
   margin-top: 85px;
 }
 
@@ -269,13 +269,12 @@ header li a:hover::after {
   background-color: #fff;
   border: 1px solid #65d4ff;
   border-radius: 15px;
-  width: 48%;
   padding: 27px 23px;
 }
 
 .skill-detail h3 {
   font-size: 1.5rem;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   font-weight: 300px;
   text-align: center;
 }
@@ -316,8 +315,6 @@ header li a:hover::after {
 }
 
 .strengths-content li {
-  display: flex;
-  justify-content: space-between;
   border-top: 1px solid #cbcbcb;
   padding: 30px 0;
 }
@@ -328,12 +325,11 @@ header li a:hover::after {
 
 .strengths-content h3 {
   font-size: 1.5rem;
-  width: 99px;
 }
 
 .strengths-content p {
   font-size: 1.1rem;
-  width: 620px;
+  margin-top: 5px;
 }
 
 /* 作品詳細 */
@@ -430,7 +426,7 @@ header li a:hover::after {
 
 .arrow-left::before,
 .arrow-left::after {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(50% - 2px);
   left: 0;
@@ -459,7 +455,7 @@ header li a:hover::after {
 
 .arrow-right::before,
 .arrow-right::after {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(50% - 2px);
   right: 0;
@@ -500,7 +496,7 @@ footer {
   margin-top: auto;
   padding: 41px 0;
   text-align: center;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
 }
 
 .footer-area {
@@ -533,12 +529,6 @@ footer {
 
 @media screen and (max-width: 768px) {
   /* 作品一覧 */
-  #work-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* gap: 2rem 1rem; */
-  }
-
   #category-area {
     display: block;
   }
